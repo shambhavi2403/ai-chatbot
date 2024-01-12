@@ -20,6 +20,7 @@ def input_form():
       response = openai.ChatCompletion.create(
             model ="gpt-3.5-turbo",
             temperature=0,
+            max_tokens=50,
             messages =[
                 {"role": "user", "content": f'{input_value}'}
             ]
